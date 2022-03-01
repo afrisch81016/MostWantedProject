@@ -40,7 +40,7 @@ function mainMenu(person, people){
 
   switch(displayOption){
     case "info":
-      alert(displayPerson);
+      return(displayPerson(person));
     // TODO: get person's info
     break;
     case "family":
