@@ -127,7 +127,9 @@ function displayPerson(person){
   personInfo += "Eye Color: " + person.eyeColor + "\n";
   personInfo += "Occupation: " + person.occupation + "\n";
 
+  promptFor("Select 'OK' to go back to person or 'Cancel' to start a new search", autoValid);
   alert(personInfo);
+  
   // TODO: finish getting the rest of the information to display.
 //#endregion
 }
