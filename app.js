@@ -126,9 +126,11 @@ function displayPerson(person){
   personInfo += "Weight: " + person.weight + "\n";
   personInfo += "Eye Color: " + person.eyeColor + "\n";
   personInfo += "Occupation: " + person.occupation + "\n";
+  personInfo += "\n" + "Select OK to go back to person or Cancel to start a new search"
 
-  promptFor("Select 'OK' to go back to person or 'Cancel' to start a new search", autoValid);
-  alert(personInfo);
+  // alert(personInfo);
+  let result = promptFor(personInfo, autoValid);
+  return result
   
   // TODO: finish getting the rest of the information to display.
 //#endregion
