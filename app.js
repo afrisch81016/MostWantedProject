@@ -40,6 +40,7 @@ function mainMenu(person, people){
 
   switch(displayOption){
     case "info":
+      alert(displayPerson);
     // TODO: get person's info
     break;
     case "family":
@@ -110,12 +111,17 @@ function displayPerson(person){
   // height, weight, age, name, occupation, eye color.
   let personInfo = "First Name: " + person.firstName + "\n";
   personInfo += "Last Name: " + person.lastName + "\n";
-  // TODO: finish getting the rest of the information to display.
+  personInfo += "Gender: " + person.gender + "\n";
+  personInfo += "Date of Birth: " + person.dob + "\n";
+  personInfo += "Height: " + person.height + "\n";
+  personInfo += "Weight: " + person.weight + "\n";
+  personInfo += "Eye Color: " + person.eyeColor + "\n";
+  personInfo += "Occupation: " + person.occupation + "\n";
+
   alert(personInfo);
-}
-
+  // TODO: finish getting the rest of the information to display.
 //#endregion
-
+}
 
 
 //Validation functions.
