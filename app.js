@@ -15,7 +15,22 @@ function app(people){
       searchResults = searchByName(people);
       break;
     case 'no':
-      // TODO: search by traits
+      searchResults = searchByEyeColor(people);
+      break;
+    case 'no':
+      searchResults = searchByGender(people);
+      break;
+    case 'no':
+        searchResults = searchByDOB(people);
+      break;
+    case 'no':
+      searchResults = searchByOccupation(people);
+      break;
+    case 'no':
+        searchResults = searchByHeight(people);
+      break;
+    case 'no':
+      searchResults = searchByWeight(people);
       break;
       default:
     app(people); // restart app
@@ -87,7 +102,7 @@ function searchByName(people){
 function searchByEyeColor(people){
   let eyeColor = promptFor("What is the person's eye color?", autoValid);
   let foundEyeColor = people.filter(function(potentialMatch){
-    if(potentialMatch.eyeColor === eyeColor && potentialMatch){
+    if(potentialMatch.eyeColor === eyeColor){
       return true;
     }
     else{
@@ -96,9 +111,83 @@ function searchByEyeColor(people){
   })
   return foundEyeColor[0];
 }
-
 //TODO: add other trait filter functions here.
 
+function searchByGender(people){
+  let gender = promptFor("What is the person's gender?", autoValid);
+
+  let foundGender = people.filter(function(potentialMatch){
+    if(potentialMatch.gender === gender){
+      return true;
+    }
+    else{
+      return false;
+    }
+  })
+  return foundGender[0];
+}
+
+  function searchByHeight(people){
+    let height = promptFor("What is the person's height?", autoValid);
+  
+    let foundHeight = people.filter(function(potentialMatch){
+      if(potentialMatch.height === height){
+        return true;
+      }
+      else{
+        return false;
+      }
+    })
+    return foundHeight[0];
+  }
+
+  function searchByWeight(people){
+    let weight= promptFor("What is the person's weight?", autoValid);
+  
+    let foundWeight = people.filter(function(potentialMatch){
+      if(potentialMatch.weight === weight){
+        return true;
+      }
+      else{
+        return false;
+      }
+    })
+   
+    return foundWeight[0];
+  }
+
+  function searchByDOB(people){
+    let DOB = promptFor("What is the person's date of birth?", autoValid);
+
+    let foundDOB = people.filter(function(potentialMatch){
+      if(potentialMatch.DOB === DOB){
+        return true;
+      }
+      else{
+        return false;
+      }
+    })
+    
+    return foundDOB[0];
+  }
+
+  function searchByOccupation(people){
+    let occupation = promptFor("What does this person do for a living?", autoValid);
+  
+    let foundOccupation = people.filter(function(potentialMatch){
+      if(potentialMatch.occupation === occupation){
+        return true;
+      }
+      else{
+        return false;
+      }
+    })
+  
+    return foundOccupation[0];
+  }
+
+
+  // TODO: find the person single person object using the name they entered.
 
 
 //#endregion
