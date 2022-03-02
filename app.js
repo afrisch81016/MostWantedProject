@@ -15,7 +15,7 @@ function app(people){
       searchResults = searchByName(people);
       break;
     case 'no':
-      searchByTraits()
+      searchByTraits(people)
       default:
     app(people); // restart app
       break;
@@ -24,28 +24,27 @@ function app(people){
   // Call the mainMenu function ONLY after you find the SINGLE person you are looking for
   mainMenu(searchResults, people);
 }
-function searchByTraits(){
-  let searchType = promptFor("Eye color?", yesNo).toLowerCase();
-  let searchResults;
+function searchByTraits(people){
+  let searchType = prompt("What would you like to search by? (eye color, gender, occupation, date of birth, height,or weight")
+
   switch(searchType){
-    case 'yes':
-      searchResults = searchByEyeColor(people);
+    case 'eye color':
+      searchByEyeColor(people);
       break;
-      case 'no':
-      searchResults = searchByGender(people);
-    displayPeople(searchResults);
+      case 'gender':
+      searchByGender(people);
       break;
-      case 'no':
-      searchResults = searchByDOB(people);
+      case 'date of birth':
+      searchByDOB(people);
       break;
-      case 'no':
-      searchResults = searchByOccupation(people);
+      case 'occupation':
+      searchByOccupation(people);
       break;
-      case 'no':
-      searchResults = searchByHeight(people);
+      case 'height':
+      searchByHeight(people);
       break;
-      case 'no':
-      searchResults = searchByWeight(people);
+      case 'weight':
+      searchByWeight(people);
       break;
 }}
 
