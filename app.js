@@ -31,9 +31,14 @@ function searchByTraits(people){
 
   switch(searchType){
     case 'eye color':
+<<<<<<< HEAD
       let returnedInfo = searchByEyeColor(people);
       displayPeople(returnedInfo)
       return returnedInfo
+=======
+      searchByEyeColor(people);
+      return (displayPerson(person));
+>>>>>>> 28f3e06d80e8885f6a8aa0300190a166414ce212
       break;
       case 'gender':
       searchByGender(people);
