@@ -244,9 +244,11 @@ function displayPerson(person){
 //#endregion
 }
 
-function displayDescendants(person){
-  let descendantofparents = people.filter(function(potentialMatch){
-    if (potentialMatch.parents === descendantofparents){
+function displayDescendants(people){
+  let descendantOfParents = people.filter(function(potentialMatch){
+  let num3 = parseInt(descendantOfParents)
+
+    if (potentialMatch === num3){
       return true
     }
     else{
@@ -254,6 +256,7 @@ function displayDescendants(person){
     }
   })
 }
+
 
 
 //Validation functions.
