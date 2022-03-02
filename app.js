@@ -46,7 +46,7 @@ function searchByTraits(people){
       break;
       case 'occupation':
         let occupationInfo = searchByOccupation(people);
-        displayPeople(occupationInfo)
+        displayPeople(occupationdInfo)
         return occupationInfo
       break;
       case 'height':
@@ -56,8 +56,8 @@ function searchByTraits(people){
       break;
       case 'weight':
         let weightInfo = searchByWeight(people);
-        displayPeople(weightInfo)
-        return weightInfo
+        displayPeople(returnedInfo)
+        return returnedInfo
       break;
 }}
 // Menu function to call once you find who you are looking for
@@ -143,7 +143,7 @@ function searchByGender(people){
       return false;
     }
   })
-  return foundGender[0];
+  return foundGender;
 }
 
   function searchByHeight(people){
@@ -157,7 +157,7 @@ function searchByGender(people){
         return false;
       }
     })
-    return foundHeight[0];
+    return foundHeight;
   }
 
   function searchByWeight(people){
@@ -172,7 +172,7 @@ function searchByGender(people){
       }
     })
    
-    return foundWeight[0];
+    return foundWeight;
   }
 
   function searchByDOB(people){
@@ -187,7 +187,7 @@ function searchByGender(people){
       }
     })
     
-    return foundDOB[0];
+    return foundDOB;
   }
 
   function searchByOccupation(people){
@@ -202,7 +202,7 @@ function searchByGender(people){
       }
     })
   
-    return foundOccupation[0];
+    return foundOccupation;
   }
 
 
