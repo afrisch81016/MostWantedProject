@@ -35,29 +35,29 @@ function searchByTraits(people){
       return returnedInfo
       break;
       case 'gender':
-        let returnedInfo = searchByGender(people);
-        displayPeople(returnedInfo)
-        return returnedInfo
+        let genderInfo = searchByGender(people);
+        displayPeople(genderInfo)
+        return genderInfo
       break;
       case 'date of birth':
-        let returnedInfo = searchByDOB(people);
-        displayPeople(returnedInfo)
-        return returnedInfo
+        let DOBInfo = searchByDOB(people);
+        displayPeople(DOBInfo)
+        return DOBInfo
       break;
       case 'occupation':
-        let returnedInfo = searchByOccupation(people);
-        displayPeople(returnedInfo)
-        return returnedInfo
+        let occupationInfo = searchByOccupation(people);
+        displayPeople(occupationInfo)
+        return occupationInfo
       break;
       case 'height':
-        let returnedInfo = searchByHeight(people);
-        displayPeople(returnedInfo)
-        return returnedInfo
+        let heightInfo = searchByHeight(people);
+        displayPeople(heightInfo)
+        return heightInfo
       break;
       case 'weight':
-        let returnedInfo = searchByWeight(people);
-        displayPeople(returnedInfo)
-        return returnedInfo
+        let weightInfo = searchByWeight(people);
+        displayPeople(weightInfo)
+        return weightInfo
       break;
 }}
 // Menu function to call once you find who you are looking for
