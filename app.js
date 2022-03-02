@@ -25,12 +25,11 @@ function app(people){
   mainMenu(searchResults, people);
 }
 function searchByTraits(){
-  let searchType = promptFor("Eye color?");
+  let searchType = promptFor("Eye color?", yesNo).toLowerCase();
   let searchResults;
   switch(searchType){
     case 'yes':
       searchResults = searchByEyeColor(people);
-    displayPeople(searchResults);
       break;
       case 'no':
       searchResults = searchByGender(people);
