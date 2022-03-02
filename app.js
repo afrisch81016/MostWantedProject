@@ -25,11 +25,11 @@ function app(people){
   mainMenu(searchResults, people);
 }
 function searchByTraits(){
-  let searchType = promptFor("What do you want to search for?");
+  let searchType = promptFor("Eye color?");
   let searchResults;
   switch(searchType){
     case 'yes':
-    searchResults = searchByEyeColor(people);
+      searchResults = searchByEyeColor(people);
     displayPeople(searchResults);
       break;
       case 'no':
@@ -48,7 +48,7 @@ function searchByTraits(){
       case 'no':
       searchResults = searchByWeight(people);
       break;
-}
+}}
 
 // Menu function to call once you find who you are looking for
 function mainMenu(person, people){
@@ -275,6 +275,6 @@ function autoValid(input){
 //can be used for things like eye color validation for example.
 function customValidation(input){
   
-}}
+}
 
 //#endymion
