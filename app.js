@@ -302,3 +302,5 @@ function customValidation(input){
 }
 
 //#endymion
+
+// todo use potentialMatch.id compared to person.parents[0]
