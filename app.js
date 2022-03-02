@@ -15,23 +15,7 @@ function app(people){
       searchResults = searchByName(people);
       break;
     case 'no':
-      searchResults = searchByEyeColor(people);
-      break;
-    case 'no':
-      searchResults = searchByGender(people);
-      break;
-    case 'no':
-        searchResults = searchByDOB(people);
-      break;
-    case 'no':
-      searchResults = searchByOccupation(people);
-      break;
-    case 'no':
-        searchResults = searchByHeight(people);
-      break;
-    case 'no':
-      searchResults = searchByWeight(people);
-      break;
+      searchByTraits()
       default:
     app(people); // restart app
       break;
@@ -39,6 +23,31 @@ function app(people){
   
   // Call the mainMenu function ONLY after you find the SINGLE person you are looking for
   mainMenu(searchResults, people);
+}
+function searchByTraits(){
+  let searchType = promptFor("What do you want to search for?");
+  let searchResults;
+  switch(searchType){
+    case 'yes':
+    searchResults = searchByEyeColor(people);
+    displayPeople(searchResults);
+      break;
+      case 'no':
+      searchResults = searchByGender(people);
+    displayPeople(searchResults);
+      break;
+      case 'no':
+      searchResults = searchByDOB(people);
+      break;
+      case 'no':
+      searchResults = searchByOccupation(people);
+      break;
+      case 'no':
+      searchResults = searchByHeight(people);
+      break;
+      case 'no':
+      searchResults = searchByWeight(people);
+      break;
 }
 
 // Menu function to call once you find who you are looking for
@@ -109,7 +118,7 @@ function searchByEyeColor(people){
       return false;
     }
   })
-  return foundEyeColor[displayPeople];
+  return foundEyeColor
 }
 //TODO: add other trait filter functions here.
 
@@ -266,6 +275,6 @@ function autoValid(input){
 //can be used for things like eye color validation for example.
 function customValidation(input){
   
-}
+}}
 
-//#endregion
+//#endymion
