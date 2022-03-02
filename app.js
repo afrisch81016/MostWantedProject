@@ -109,7 +109,7 @@ function searchByEyeColor(people){
       return false;
     }
   })
-  return foundEyeColor[0];
+  return foundEyeColor[displayPeople];
 }
 //TODO: add other trait filter functions here.
 
