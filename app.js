@@ -26,11 +26,14 @@ function app(people){
 }
 function searchByTraits(people){
   let searchType = prompt("What would you like to search by? (eye color, gender, occupation, date of birth, height,or weight");
-  
+  let returnedInfo = [22];
+
 
   switch(searchType){
     case 'eye color':
-      searchByEyeColor(people);
+      let returnedInfo = searchByEyeColor(people);
+      displayPeople(returnedInfo)
+      return returnedInfo
       break;
       case 'gender':
       searchByGender(people);
