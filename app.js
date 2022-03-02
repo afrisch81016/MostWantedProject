@@ -46,7 +46,7 @@ function searchByTraits(people){
       break;
       case 'occupation':
         let occupationInfo = searchByOccupation(people);
-        displayPeople(occupationdInfo)
+        displayPeople(occupationInfo)
         return occupationInfo
       break;
       case 'height':
@@ -56,8 +56,8 @@ function searchByTraits(people){
       break;
       case 'weight':
         let weightInfo = searchByWeight(people);
-        displayPeople(returnedInfo)
-        return returnedInfo
+        displayPeople(weightInfo)
+        return weightInfo
       break;
 }}
 // Menu function to call once you find who you are looking for
@@ -148,9 +148,9 @@ function searchByGender(people){
 
   function searchByHeight(people){
     let height = promptFor("What is the person's height?", autoValid);
-  
+    let num1 = parseInt(height)
     let foundHeight = people.filter(function(potentialMatch){
-      if(potentialMatch.height === height){
+      if(potentialMatch.height === num1){
         return true;
       }
       else{
@@ -162,9 +162,9 @@ function searchByGender(people){
 
   function searchByWeight(people){
     let weight= promptFor("What is the person's weight?", autoValid);
-  
+    let num2 = parseInt(weight)
     let foundWeight = people.filter(function(potentialMatch){
-      if(potentialMatch.weight === weight){
+      if(potentialMatch.weight === num2){
         return true;
       }
       else{
@@ -176,10 +176,10 @@ function searchByGender(people){
   }
 
   function searchByDOB(people){
-    let DOB = promptFor("What is the person's date of birth?", autoValid);
+    let dob = promptFor("What is the person's date of birth?", autoValid);
 
-    let foundDOB = people.filter(function(potentialMatch){
-      if(potentialMatch.DOB === DOB){
+    let foundDob = people.filter(function(potentialMatch){
+      if(potentialMatch.dob === dob){
         return true;
       }
       else{
@@ -187,7 +187,7 @@ function searchByGender(people){
       }
     })
     
-    return foundDOB;
+    return foundDob;
   }
 
   function searchByOccupation(people){
