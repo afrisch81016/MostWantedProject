@@ -81,7 +81,7 @@ function mainMenu(person, people){
     // TODO: get person's family
     break;
     case "descendants":
-    // TODO: get person's descendants
+    return (displayDescendants(person));
     break;
     case "restart":
     app(people); // restart
@@ -242,6 +242,17 @@ function displayPerson(person){
   
   // TODO: finish getting the rest of the information to display.
 //#endregion
+}
+
+function displayDescendants(person){
+  let descendantofparents = people.filter(function(potentialMatch){
+    if (potentialMatch.parents === descendantofparents){
+      return true
+    }
+    else{
+      return false
+    }
+  })
 }
 
 
