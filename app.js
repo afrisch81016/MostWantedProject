@@ -25,7 +25,9 @@ function app(people){
   mainMenu(searchResults, people);
 }
 function searchByTraits(people){
-  let searchType = prompt("What would you like to search by? (eye color, gender, occupation, date of birth, height,or weight")
+  let searchType = prompt("What would you like to search by? (eye color, gender, occupation, date of birth, height,or weight");
+  
+
   switch(searchType){
     case 'eye color':
       searchByEyeColor(people);
@@ -46,8 +48,7 @@ function searchByTraits(people){
       case 'weight':
       searchByWeight(people);
       break;
-}} 
-
+}}
 // Menu function to call once you find who you are looking for
 function mainMenu(person, people){
 
