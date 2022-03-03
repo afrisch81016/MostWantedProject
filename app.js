@@ -81,7 +81,7 @@ function mainMenu(person, people){
     // TODO: get person's family
     break;
     case "descendants":
-    return (findDescendants(person, people));
+    return (findChildren(person, people));
     break;
     case "restart":
     app(people); // restart
@@ -245,7 +245,7 @@ function displayPerson(person){
 }
 
 
-function findChildren(personWithDescedants, people){
+function findChildren(personWithDescedants,people){
   let foundDescendants = people.filter(function(potentialDescendant){
     if(potentialDescendant.parents.includes(personWithDescedants.id)){
       return true;
@@ -258,13 +258,13 @@ function findChildren(personWithDescedants, people){
 }
 //personWithDescandant's id is in potentialDescant's parents array
 
-function findDescendants(personWithDescedants, people){
-  //find children
-  let children = findChildren(personWithDescedants, people);
-  return children;
+// function findDescendants(personWithDescedants, people){
+//   //find children
+//   let children = findChildren(personWithDescedants, people);
+//   return children;
   //find children of children
 
-}
+
 
 
 //Validation functions.
