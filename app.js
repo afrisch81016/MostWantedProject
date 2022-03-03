@@ -78,6 +78,7 @@ function mainMenu(person, people){
     // TODO: get person's info
     break;
     case "family":
+      return (findSpouse(person, people));
     // TODO: get person's family
     break;
     case "descendants":
@@ -246,7 +247,7 @@ function displayPerson(person){
 
 
 function findChildren(personWithDescedants,people){
-  let foundDescendants = people.filter(function(potentialDescendant){
+  let foundChildren = people.filter(function(potentialDescendant){
     if(potentialDescendant.parents.includes(personWithDescedants.id)){
       return true;
     }
@@ -254,7 +255,19 @@ function findChildren(personWithDescedants,people){
       return false;
     }
   })
-  return foundDescendants;
+  return foundChildren;
+}
+
+function findSpouse(personWithSpouse, people){
+  let foundSpouse = people.filter(function(potentialSpouse){
+    if(potentialSpouse.currentSpouse.includes(personWithSpouse.id)){
+      return true;
+    }
+    else {
+      return false;
+    }
+  })
+  return foundSpouse;
 }
 //personWithDescandant's id is in potentialDescant's parents array
 
