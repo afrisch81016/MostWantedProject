@@ -260,6 +260,7 @@ function searchByDescendant(people){
 }
 
 
+
 //Validation functions.
 //Functions to validate user input.
 /////////////////////////////////////////////////////////////////
@@ -303,3 +304,5 @@ function customValidation(input){
 }
 
 //#endymion
+
+// todo use potentialMatch.id compared to person.parents[0]
