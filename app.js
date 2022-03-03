@@ -74,15 +74,16 @@ function mainMenu(person, people){
 
   switch(displayOption){
     case "info":
-      return (displayPerson(person));
+    (displayPerson(person));
     // TODO: get person's info
     break;
     case "family":
-      return (findSpouse(person, people));
+    findSpouse(person, people);
+    findParents(person, people);
     // TODO: get person's family
     break;
     case "descendants":
-    return (findChildren(person, people));
+    findChildren(person, people);
     break;
     case "restart":
     app(people); // restart
@@ -255,20 +256,24 @@ function findChildren(personWithDescedants,people){
       return false;
     }
   })
-  return foundChildren;
+  displayPeople(foundChildren)
+ 
 }
 
-function findSpouse(personWithSpouse, people){
-  let foundSpouse = people.filter(function(potentialSpouse){
-    if(potentialSpouse.currentSpouse.includes(personWithSpouse.id)){
-      return true;
-    }
-    else {
-      return false;
-    }
-  })
-  return foundSpouse;
+function findParents(personWithParents,people){
+  let foundParents = people.filter(function(potentialMatch){
+if (potentialMatch.parents.includes(personWithParents.parents)){
+  return true;
 }
+  else {
+    return false;
+}
+  })
+displayPeople(foundParents)
+
+}
+
+
 //personWithDescandant's id is in potentialDescant's parents array
 
 // function findDescendants(personWithDescedants, people){
@@ -277,7 +282,18 @@ function findSpouse(personWithSpouse, people){
 //   return children;
   //find children of children
 
+  function findSpouse(person, people) {
 
+      let foundSpouse = people.filter(function (potentialSpouse) {
+        if (potentialSpouse.currentSpouse === person.id) {
+          return true;
+        }
+        else {
+          return false;
+        }
+      });
+      displayPeople(foundSpouse);
+    }
 
 
 //Validation functions.
