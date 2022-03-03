@@ -81,7 +81,7 @@ function mainMenu(person, people){
     // TODO: get person's family
     break;
     case "descendants":
-    return (searchByDescendant(descendInfo));
+    return (searchByDescendant(person, people));
     break;
     case "restart":
     app(people); // restart
@@ -245,9 +245,9 @@ function displayPerson(person){
 }
 
 
-function searchByDescendant(people){
-  let foundDescendants = people.filter(function(potentialMatch){
-    if(potentialMatch.id.firstName === people[0] && potentialMatch.id.lastName === people[1]){
+function searchByDescendant(personWithDescedants, people){
+  let foundDescendants = people.filter(function(potentialDescendant){
+    if(potentialDescendant.parents.includes(personWithDescedants.id)){
       return true;
     }
     else{
@@ -256,6 +256,7 @@ function searchByDescendant(people){
   })
   return foundDescendants;
 }
+//personWithDescandant's id is in potentialDescant's parents array
 
 
 
