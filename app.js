@@ -80,6 +80,7 @@ function mainMenu(person, people){
     case "family":
     findSpouse(person, people);
     findParents(person, people);
+    findSiblings(person, people);
     // TODO: get person's family
     break;
     case "descendants":
@@ -241,10 +242,11 @@ function displayPerson(person){
   // alert(personInfo);
   let result = promptFor(personInfo, autoValid);
   return result
+
+}
   
   // TODO: finish getting the rest of the information to display.
-//#endregion
-}
+//#endregion}
 
 
 function findChildren(personWithDescedants,people){
@@ -256,7 +258,24 @@ function findChildren(personWithDescedants,people){
       return false;
     }
   })
-  displayPeople(foundChildren)
+  
+  displayPeople(foundChildren);
+  
+ 
+}
+
+function findSiblings(siblings ,people){
+  let foundSiblings = people.filter(function(potentialSibling){
+    if(potentialSibling.parents.includes(siblings.parents[0])){
+      return true;
+    }
+    else{
+      return false;
+    }
+  })
+  
+  displayPeople(foundSiblings);
+  
  
 }
 
