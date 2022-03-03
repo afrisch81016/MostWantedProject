@@ -81,8 +81,7 @@ function mainMenu(person, people){
     // TODO: get person's family
     break;
     case "descendants":
-      let descendInfo = searchByDescendant(people);
-      return (displayPerson(descendInfo));
+    return (searchByDescendant(descendInfo));
     break;
     case "restart":
     app(people); // restart
@@ -247,9 +246,8 @@ function displayPerson(person){
 
 
 function searchByDescendant(people){
-  let potentialMatch = displayOption(person);
   let foundDescendants = people.filter(function(potentialMatch){
-    if(potentialMatch.id === parents[0],parents[1]){
+    if(potentialMatch.id.firstName === people[0] && potentialMatch.id.lastName === people[1]){
       return true;
     }
     else{
