@@ -81,7 +81,8 @@ function mainMenu(person, people){
     // TODO: get person's family
     break;
     case "descendants":
-    return (displayDescendants(person));
+      let descendInfo = searchByDescendant(people);
+      return (displayPerson(descendInfo));
     break;
     case "restart":
     app(people); // restart
@@ -244,15 +245,18 @@ function displayPerson(person){
 //#endregion
 }
 
-function displayDescendants(person){
-  let descendantofparents = people.filter(function(potentialMatch){
-    if (potentialMatch.parents === descendantofparents){
-      return true
+
+function searchByDescendant(people){
+  let potentialMatch = displayOption(person);
+  let foundDescendants = people.filter(function(potentialMatch){
+    if(potentialMatch.id === parents[0],parents[1]){
+      return true;
     }
     else{
-      return false
+      return false;
     }
   })
+  return foundDescendants;
 }
 
 
